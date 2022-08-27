@@ -32,7 +32,7 @@
 
     <EditText
         android:id="@+id/shoe_name_edit"
-        android:text="@{shoe.name}"
+        android:text="@={shoe.name}"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
@@ -104,7 +104,7 @@
 
     <EditText
         android:id="@+id/description_edit"
-        android:text="@{shoe.description}"
+        android:text="@={shoe.description}"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -125,7 +125,6 @@
         android:layout_marginBottom="84dp"
         android:background="@color/buttonColor"
         android:text="@string/save_button"
-        android:onClick="@{() -> ShoeListViewModel.addShoe(shoe)}"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cancel_button"
         app:layout_constraintHorizontal_bias="0.563"
@@ -144,7 +143,7 @@
 
     <EditText
         android:id="@+id/shoe_company_edit"
-        android:text="@{shoe.company}"
+        android:text="@={shoe.company}"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"

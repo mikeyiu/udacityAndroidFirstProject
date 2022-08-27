@@ -15,7 +15,7 @@ import com.udacity.shoestore.models.ShoeListViewModel
 
 
 class ShoeList : Fragment() {
-         private var viewModel: ShoeListViewModel()
+         private val sharedViewModel: ShoeListViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,9 +26,9 @@ class ShoeList : Fragment() {
             inflater, R.layout.fragment_shoe_list, container, false
         )
 
-        viewModel = ViewModelProvider(this)[ShoeListViewModel::class.java]
 
-        binding.parentLinearLayout.addView()
+
+        binding.parentLinearLayout
 
 
 
