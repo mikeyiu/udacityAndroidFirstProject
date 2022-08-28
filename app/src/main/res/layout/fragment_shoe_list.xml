@@ -6,7 +6,7 @@
     <data>
         <variable
             name="shoeListViewModel"
-            type="com.udacity.shoestore.models.ShoeListViewModel" />
+            type="com.udacity.shoestore.models.Shoe" />
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,12 +15,53 @@
     android:layout_height="match_parent"
     tools:context=".ShoeList" >
 
+    <LinearLayout
+        android:layout_width="378dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:id="@+id/showListViewModel_name_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@={shoeListViewModel.name}"/>
+
+        <TextView
+            android:id="@+id/showListViewModel_size_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@={`` + shoeListViewModel.size}" />
+
+        <TextView
+            android:id="@+id/shoeListViewModel_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@={shoeListViewModel.description}" />
+
+        <TextView
+            android:id="@+id/shoeList_company_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@={shoeListViewModel.company}" />
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:ignore="SpeakableTextPresentCheck"
         tools:layout_editor_absoluteX="149dp"
         tools:layout_editor_absoluteY="323dp">
+
+
 
         <LinearLayout
             android:id="@+id/parent_linear_layout"
